@@ -14,11 +14,11 @@ jobs:
           psql \
           -d $TEST_DATABASE_URL \
           -c "CREATE TABLE test (name char(25));"
-     - run: |
+      - run: |
           psql \
           -d $TEST_DATABASE_URL \
           -c "INSERT INTO test (name) VALUES ('fern')"
-     - run: |
+      - run: |
           psql \
           -d $TEST_DATABASE_URL \
           -c "SELECT * FROM test"
